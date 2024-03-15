@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     // Function to check if the viewport matches a mobile device
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 400); // Assuming 768px is the threshold for mobile
+      setIsMobile(window.innerWidth <= 700); // Assuming 768px is the threshold for mobile
     };
 
     // Initial check on component mount
@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <img className='img_up' src={isMobile ? img_m : img_d} alt="background" />
-      <Card/>
+      <Card isMobile={isMobile}/>
       <Footer/>
     </div>
   );

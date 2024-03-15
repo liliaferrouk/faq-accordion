@@ -1,3 +1,14 @@
+main{
+    width: 83vw;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -94px;
+    padding: 23px;
+    padding-bottom: 0;
+}
 .FAQs{
     padding: 1px;
     display: flex;
@@ -12,6 +23,10 @@ h1{
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+.FAQ:hover{
+    color: #ae2de0;
+    cursor: pointer;
 }
 .question{
     display: flex;
@@ -31,4 +46,23 @@ p{
     color: hsl(292, 16%, 49%);
     padding: 0px;
     line-height: 1.3rem;
+}
+
+@media screen and (min-width: 700px) {
+main{
+    width: 600px;
+    top: -155px;
+}
+.FAQs{
+    margin-top: 10px;
+}
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    font-size: 1.12rem;
+}
+p{
+    font-size: 1rem;
+}
 }

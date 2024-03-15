@@ -8,10 +8,10 @@ function FAQ(props) {
         setIsShowen(!isShowen)
     }
   return (
-    <div className='FAQ'>
+    <div onClick={toggleFAQ} className='FAQ'>
         <div className='question'>
           <h2>{props.question}</h2>
-          <img onClick={toggleFAQ} width={'30px'} src={isShowen ? icon_minus : icon_plus} alt="icon_minus" />
+          <img width={'30px'} src={isShowen ? icon_minus : icon_plus} alt="icon_minus" />
         </div>
         {isShowen && <p>{props.reponse}</p>}
       </div>
