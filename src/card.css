@@ -48,7 +48,13 @@ p{
     line-height: 1.3rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 400px) {
+main{
+    top: -50px;
+}
+}
+
+@media screen and (min-width: 900px) {
 main{
     width: 600px;
     top: -155px;
