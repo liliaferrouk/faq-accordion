@@ -8,6 +8,7 @@ main{
     top: -94px;
     padding: 23px;
     padding-bottom: 0;
+    margin-bottom: 20px;
 }
 .FAQs{
     padding: 1px;
@@ -22,7 +23,7 @@ h1{
     padding: 1px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid hsl(275, 100%, 97%);
+    /* border-bottom: 2px solid hsl(275, 100%, 97%); */
 }
 .FAQ:hover{
     color: #ae2de0;

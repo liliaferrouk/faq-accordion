@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,body{
+  height: 100%;
+}
 #root{
   min-height: 100vh;
 }
@@ -14,12 +17,10 @@ body {
   min-height: 100%;
 }
 .app{
-  min-height: 100vh;
   width: 100%;
   position: relative;
 }
 .img_up{
-  /* top: 0; */
   width: 100%;
 }
 footer {
