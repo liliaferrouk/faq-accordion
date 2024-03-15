@@ -1,34 +1,37 @@
 import Footer from './Footer';
 import './index.css';
 // import img from './images/favicon-32x32.png';
-import img from './images/background-pattern-desktop.svg';
+import img_d from './images/background-pattern-desktop.svg';
+import img_m from './images/background-pattern-mobile.svg';
+import { useEffect, useState } from 'react';
+import Card from './Card';
+
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check if the viewport matches a mobile device
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 400); // Assuming 768px is the threshold for mobile
+    };
+
+    // Initial check on component mount
+    checkIsMobile();
+
+    // Event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <img src={img} alt="My Image" />
-      {/* FAQs
-
-      What is Frontend Mentor, and how will it help me?
-
-      Frontend Mentor offers realistic coding challenges to help developers improve their 
-      frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-      all levels and ideal for portfolio building.
-
-      Is Frontend Mentor free?
-
-      Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-      option providing access to a range of projects suitable for all skill levels.
-
-      Can I use Frontend Mentor projects in my portfolio?
-
-      Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-      way to showcase your skills to potential employers!
-
-      How can I get help if I'm stuck on a Frontend Mentor challenge?
-
-      The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-      channel where you can ask questions and seek support from other community members. */}
+      <img className='img_up' src={isMobile ? img_m : img_d} alt="background" />
+      <Card/>
       <Footer/>
     </div>
   );
