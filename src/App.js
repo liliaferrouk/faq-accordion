@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <img className='img_up' src={isMobile ? img_m : img_d} alt="background" />
       <Card isMobile={isMobile}/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
